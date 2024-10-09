@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP entregable 2</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header class="app-header"></header>
+        <h1 class="app-title">PaintApp</h1>
+    </header>
+
+    <div class="container">
+        <!-- Canvas principal -->
+        <canvas id="canvas" tabindex="0" class="canvas" width="640" height="480"></canvas>
+
+        <!-- Contenedor de botones y herramientas -->
+        <div class="toolbar">
+            <!-- Herramientas de dibujo -->
+            <div class="tool-buttons">
+                <button id="lapiz"><img src="img/lapiz.png" alt="Lápiz"></button>
+                <button id="goma"><img src="img/goma.png" alt="Goma"></button>
+                <label for="grosor"> </label>
+                <img src="img/grosor.png" width="25px" height="25px">
+                <input type="range" id="grosor" min="1" max="20" value="10" >
+                <span id="valorGrosor"></span>
+                <label for="colorPicker"> </label>
+                <input id="colorPicker" type="color" value="#000000"> <!-- Color predeterminado: negro -->
+                <button id="limpiar"><img src="img/limpiar.png" alt="Limpiar"></button>
+                <button id="deshacer"><img src="img/deshacer.png"></button>
+
+            </div>
+
+            <!-- Opciones de archivo (subir, limpiar y guardar) -->
+
+            <!-- Opciones de filtros -->
+            <div class="filter-options">
+                <button id="filtro"><img src="img/filtros.png" alt="Filtros"></button>
+            </div>
+
+            <div id="menuFiltros" style="display: none;">
+                <button id="negativo">Negativo</button>
+                <button id="binarizacion">Binarización</button>
+                <button id="brillo">Brillo</button>
+                <button id="sepia">Sepia</button>
+                <button id="blur">Blur</button>
+                <button id="deteccionBordes">Detección de bordes</button>
+                <button id="saturacion">Saturación</button>
+            </div>
+            <div class="file-options">
+                <button id="uploadBtn"><img src="img/abrirArchivo.png" alt="Abrir"></button>
+                <input type="file" id="uploadImage" accept="image/png, image/jpeg" style="display: none;">
+                <button id="guardar"><img src="img/guardar.png" alt="Guardar"></button>
+            </div>
+            <div id="guardarOpciones" style="display: none;">
+                <label for="nombreArchivo">Nombre del archivo: </label>
+                <input type="text" id="nombreArchivo" placeholder="mi_dibujo">
+                <button id="confirmarGuardar">Confirmar</button>
+                <button id="cancelarGuardar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar scripts -->
+    <script src="js/Filtros.js"></script>
+    <script src="js/paintApp.js"></script>
+    <script src="js/Herramienta.js"></script>
+    <script src="js/Lapiz.js"></script>
+    <script src="js/Goma.js"></script>
+
+</body>
+
+</html>

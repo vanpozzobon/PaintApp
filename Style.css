@@ -1,0 +1,97 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  
+}
+
+
+.app-title {
+  color: #ffffff; /* Color del texto */
+  font-size: 35px; /* Tamaño del texto */
+  margin: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  transition: transform 0.3s; /* Animación suave al hover */
+}
+
+.app-title:hover {
+  transform: scale(1.05); /* Efecto de escalado al pasar el mouse */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#canvas {
+  border: 2px solid black;
+
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-buttons  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; 
+  margin: 15px 0; 
+}
+
+
+.filter-options  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  margin: 15px 0; 
+}
+
+.guardarImagen {
+  gap: 10px; 
+  margin: 15px 0; 
+
+}
+
+button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button img {
+  width: 20px; 
+  height: 20px;
+  vertical-align: middle;
+}
+
+#menuFiltros {
+  display: flex;
+  flex-direction: column;
+}
+
+#menuFiltros button {
+  margin: 5px 0;
+}
+
+button:hover {
+  background-color: #8499ee; /* Color de fondo cuando pasas el mouse */
+  color: white; /* Cambia el color del texto también */
+}
+
